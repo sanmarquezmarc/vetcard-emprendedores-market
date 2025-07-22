@@ -1,0 +1,479 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 100px 0;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Indicadores */
+.indicadores .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+.indicador {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Cómo funciona */
+.como-funciona {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+.como-funciona h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+.step-number {
+  font-size: 2rem;
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Beneficios */
+.beneficios {
+  padding: 50px 0;
+}
+.beneficios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.beneficio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Digital */
+.digital {
+  text-align: center;
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+.digital img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Testimonios */
+.testimonios {
+  padding: 50px 0;
+}
+.testimonios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.testimonios blockquote {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-style: italic;
+  color: #555;
+}
+.testimonios footer {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Destacados */
+.destacados {
+  padding: 50px 0;
+  background: #fff;
+}
+.destacados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+.destacados-grid img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* FAQ */
+.faq {
+  padding: 50px 0;
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.faq details {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 1rem;
+  background: #fff;
+}
+.faq summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+.faq p {
+  margin-top: 0.5rem;
+}
+
+/* CTA */
+.cta {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+.cta .btn-primary {
+  background: #fff;
+  color: var(--primary-color);
+}
+.cta .btn-primary:hover {
+  background: #e6e6e6;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+/* Estilos página de registro */
+.registro {
+  padding: 50px 0;
+  background: var(--secondary-color);
+}
+.registro h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+.formulario-registro {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+.form-terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-terms input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+.form-terms label {
+  font-weight: normal;
+}
+.form-terms a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.formulario-registro .btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Estilos del market */
+
+.market {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+.market h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+.cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+.cards-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.product-card {
+  flex: 0 0 250px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.product-card .info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.product-card .info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.product-card .info p {
+  flex: 1;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.product-card .info .price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #6c757d;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+/* Align navbar links to the right */
+header .nav,
+.navbar-nav {
+  margin-left: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Header & Nav */
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav li + li {
+    margin-top: 0.5rem;
+  }
+  .nav a {
+    padding: 0.75rem 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Grid sections */
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .beneficio-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Destacados */
+  .destacados-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  /* Cards slider */
+  .cards-container {
+    gap: 0.5rem;
+  }
+  .product-card {
+    flex: 0 0 80%;
+  }
+
+  /* CTA adjustments */
+  .cta {
+    padding: 40px 0;
+  }
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Form adjustments */
+  .formulario-registro {
+    padding: 1rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

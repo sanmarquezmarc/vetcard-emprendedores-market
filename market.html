@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market | VetCard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Slider cards */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1rem 0;
+      max-height: 900px;
+      overflow-y: auto;
+    }
+    .cards-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .cards-container::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+    .product-card {
+      flex: 0 0 250px;
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: start;
+    }
+    .product-card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .product-card .info {
+      padding: 1rem;
+      flex: 1;
+    }
+    .product-card .info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .product-card .info p {
+      flex: 1;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .delivery { font-size: 0.9rem; color: #555; margin: 0.25rem 0 0; }
+    .product-card .info p {
+      margin-bottom: 0.5rem;
+    }
+    .product-card .info .price {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+    .seller { font-weight: bold; margin: 0.5rem 0 0; }
+    .btn-secondary {
+      background: #6c757d;
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+
+    .product-card {
+      position: relative;
+    }
+    .promocionado-badge {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background: linear-gradient(45deg, #ffd700, #ffec8b);
+      color: #333;
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">VetCard</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="market.html">Market</a></li>
+          <li><a href="pagina_registro.html">Emprendedores</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="market" class="market">
+    <div class="container">
+      <h1>Productos Destacados</h1>
+      <div class="cards-container">
+        <!-- Row 1 -->
+        <div class="product-card promocionado">
+          <div class="promocionado-badge">Producto Promocionado</div>
+          <img src="https://source.unsplash.com/featured/400x400?dog-collar" alt="Collar de cuero para perro">
+          <div class="info">
+            <h3>Collar de cuero</h3>
+            <p class="seller">Vendido por: Juan Pérez</p>
+            <p class="delivery">Llega en: 3-5 días. Envío gratis.</p>
+            <p>Elegante collar ajustable para perros.</p>
+            <div class="price">$15,999</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card promocionado">
+          <div class="promocionado-badge">Producto Promocionado</div>
+          <img src="https://source.unsplash.com/featured/400x400?cat-toy" alt="Juguete interactivo para gato">
+          <div class="info">
+            <h3>Juguete para gato</h3>
+            <p class="seller">Vendido por: María Gómez</p>
+            <p class="delivery">Llega en: 24hs. Envío $200.</p>
+            <p>Interactivo con plumas y campana.</p>
+            <div class="price">$4,500</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card promocionado">
+          <div class="promocionado-badge">Producto Promocionado</div>
+          <img src="https://source.unsplash.com/featured/400x400?dog-treats" alt="Snack natural para perros">
+          <div class="info">
+            <h3>Snack natural</h3>
+            <p class="seller">Vendido por: Carlos Díaz</p>
+            <p class="delivery">Llega en: 5-7 días. Envío gratis.</p>
+            <p>Bocaditos de carne deshidratada, 100% naturales.</p>
+            <div class="price">$1,000</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card promocionado">
+          <div class="promocionado-badge">Producto Promocionado</div>
+          <img src="https://source.unsplash.com/featured/400x400?pet-brush" alt="Cepillo de pelo para mascotas">
+          <div class="info">
+            <h3>Cepillo profesional</h3>
+            <p class="seller">Vendido por: Ana López</p>
+            <p class="delivery">Llega en: 24hs. Envío $150.</p>
+            <p>Ergonómico para eliminar pelo suelto.</p>
+            <div class="price">$6,800</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?dog-leash" alt="Correa para perro">
+          <div class="info">
+            <h3>Correa resistente</h3>
+            <p class="seller">Vendido por: Pedro Martínez</p>
+            <p class="delivery">Llega en: 2-4 días. Envío gratis.</p>
+            <p>Correa fuerte con mosquetón de acero.</p>
+            <div class="price">$3,200</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-bed" alt="Cama para mascotas">
+          <div class="info">
+            <h3>Cama acolchada</h3>
+            <p class="seller">Vendido por: Laura Fernández</p>
+            <p class="delivery">Llega en: 24hs. Envío $250.</p>
+            <p>Suave y cómoda, ideal para descanso.</p>
+            <div class="price">$5,600</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?dog-bowl" alt="Plato para perros">
+          <div class="info">
+            <h3>Plato inoxidable</h3>
+            <p class="seller">Vendido por: Diego Ramírez</p>
+            <p class="delivery">Llega en: 4-6 días. Envío gratis.</p>
+            <p>Acero inoxidable, fácil de limpiar.</p>
+            <div class="price">$1,200</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?cat-house" alt="Casita para gatos">
+          <div class="info">
+            <h3>Casita para gato</h3>
+            <p class="seller">Vendido por: Lucía Sánchez</p>
+            <p class="delivery">Llega en: 24hs. Envío $300.</p>
+            <p>Pequeña casa con rascador integrado.</p>
+            <div class="price">$7,800</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-shampoo" alt="Champú para mascotas">
+          <div class="info">
+            <h3>Champú suave</h3>
+            <p class="seller">Vendido por: Karina Torres</p>
+            <p class="delivery">Llega en: 3-5 días. Envío gratis.</p>
+            <p>Fórmula natural para todo tipo de pelaje.</p>
+            <div class="price">$850</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-tracker" alt="Localizador de mascotas">
+          <div class="info">
+            <h3>GPS Tracker</h3>
+            <p class="seller">Vendido por: Miguel Vega</p>
+            <p class="delivery">Llega en: 24hs. Envío $180.</p>
+            <p>Localizador en tiempo real con app móvil.</p>
+            <div class="price">$12,300</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-jacket" alt="Chaqueta para perro">
+          <div class="info">
+            <h3>Chaqueta térmica</h3>
+            <p class="seller">Vendido por: Patricia Ruiz</p>
+            <p class="delivery">Llega en: 5-7 días. Envío gratis.</p>
+            <p>Impermeable y cálida para invierno.</p>
+            <div class="price">$2,450</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-carrier" alt="Transportadora de mascotas">
+          <div class="info">
+            <h3>Transportadora</h3>
+            <p class="seller">Vendido por: Sergio López</p>
+            <p class="delivery">Llega en: 24hs. Envío $220.</p>
+            <p>Fácil de llevar, ventilación 360°.</p>
+            <div class="price">$9,100</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?dog-harness" alt="Arnés para perros">
+          <div class="info">
+            <h3>Arnés ergonómico</h3>
+            <p class="seller">Vendido por: Daniela Ortiz</p>
+            <p class="delivery">Llega en: 2-4 días. Envío gratis.</p>
+            <p>Distribuye la presión de forma uniforme.</p>
+            <div class="price">$4,950</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?cat-scratcher" alt="Rascador para gatos">
+          <div class="info">
+            <h3>Rascador vertical</h3>
+            <p class="seller">Vendido por: Ricardo Morales</p>
+            <p class="delivery">Llega en: 24hs. Envío $210.</p>
+            <p>Incluye plataforma de descanso.</p>
+            <div class="price">$3,700</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?pet-toy" alt="Juguete de balón para mascotas">
+          <div class="info">
+            <h3>Ball Toy</h3>
+            <p class="seller">Vendido por: Mariana Gil</p>
+            <p class="delivery">Llega en: 4-6 días. Envío gratis.</p>
+            <p>Resistente y flotante, para juego acuático.</p>
+            <div class="price">$1,500</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://source.unsplash.com/featured/400x400?dog-healthy-snacks" alt="Snack saludable">
+          <div class="info">
+            <h3>Snack saludable</h3>
+            <p class="seller">Vendido por: Andrés Pérez</p>
+            <p class="delivery">Llega en: 24hs. Envío $230.</p>
+            <p>Mix de frutas y carne deshidratada.</p>
+            <div class="price">$1,200</div>
+            <a href="#" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>hola@vetcard.com | 
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">LinkedIn</a>
+      </p>
+      <p>© 2025 VetCard by Biotraza. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
